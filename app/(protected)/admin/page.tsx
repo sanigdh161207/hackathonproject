@@ -61,6 +61,20 @@ export default async function AdminDashboardPage() {
 
             <h2 className="text-xl font-bold text-slate-800 tracking-tight mb-5">Quick Actions</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <Link href="/admin/roles" className="group block h-full">
+                    <Card className="h-full bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer p-6 rounded-2xl hover:border-amber-300 hover:-translate-y-1">
+                        <div className="flex items-start gap-4">
+                            <div className="w-12 h-12 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-200">
+                                <Shield className="w-6 h-6 text-amber-600" />
+                            </div>
+                            <div>
+                                <h3 className="font-bold text-slate-800 text-lg mb-1">Manage Roles</h3>
+                                <p className="text-sm text-slate-500 leading-relaxed font-medium">Elevate existing users to Administrators or demote staff accounts.</p>
+                            </div>
+                        </div>
+                    </Card>
+                </Link>
+
                 <Link href="/admin/complaints" className="group block h-full">
                     <Card className="h-full bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer p-6 rounded-2xl hover:border-red-300 hover:-translate-y-1">
                         <div className="flex items-start gap-4">
