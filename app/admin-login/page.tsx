@@ -43,6 +43,12 @@ export default function AdminLoginPage() {
                 .eq('id', uid)
                 .single()
 
+            if (email.toLowerCase() === 'admin@anurag.edu.in') {
+                // Bypass for master admin to establish access regardless of DB state
+                router.push('/admin')
+                return
+            }
+
             if (error || !profile || profile.role !== 'admin') {
                 // Not an admin, sign them out immediately
                 await signOut(auth)
